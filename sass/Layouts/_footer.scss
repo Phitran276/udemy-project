@@ -1,0 +1,62 @@
+footer{
+    @include styleText($color-gray-0, $fs-1, $fw-0);
+    .footer__top{
+        width: 90%;
+        margin: 40px auto;
+        ul{
+            height: 110px;
+            .nav-item{
+                flex-basis: 25%;
+                .nav-link{
+                    padding: 0;
+                    color: $color-blue-0;
+                    &.bold{
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+        .btn-group{
+            
+            .button--dropup{
+                transition: none;
+                min-width: 160px;
+                i{
+                    padding: 0 5px;
+                }
+                &::after{
+                    margin-left: 30%;
+                }
+                &:focus{
+                    box-shadow: none;
+                    outline: 0;
+                    @include hoverButton($color-black-light, $color-white-0, $color-black-light);
+                }
+                &:active{
+                    background-color: #fff;
+                }
+               
+            }
+        }
+    }
+    hr{
+        margin: 0;
+        margin:1rem 0;
+    }
+    .footer__bottom{
+        width: 90%;
+        margin: 30px auto;
+        
+        .navbar-brand{
+            img{
+                width: 110px;
+                &.logo-black {
+                    display: inline-block;
+                }
+                &.logo-white {
+                    display: none;
+                }
+            }
+        }
+    }
+}

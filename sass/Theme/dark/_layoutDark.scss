@@ -1,0 +1,253 @@
+//header
+.darkMode {
+    .myNavbar {
+        background-color: $color-dark-4 !important;
+        .myNavbar__left {
+            .navbar-brand {
+                .logo-black {
+                    display: none;
+                }
+                .logo-white {
+                    display: inline-block;
+                }
+            }
+
+            .categories {
+                color: $color-dark-3;
+                i {
+                    color: $color-dark-5;
+                }
+            }
+
+            .formSearch {
+                @include styleFormSearch($color-dark-0, $color-dark-5, $color-dark-2, $color-dark-6);
+            }
+        }
+
+        .myNavbar__right {
+            .navbar-nav {
+                .nav-item {
+                    border: 1px solid transparent;
+                    .nav-link {
+                        color: $color-dark-5;
+                    }
+                    &:not(.navbar-nav__btns):hover {
+                        background-color: $color-dark-0;
+                        border: 1px solid $color-dark-2;
+                    }
+                    .overlay {
+                        background-color: $color-dark-4;
+                        border: 1px solid $color-dark-2;
+                        &::before {
+                            background-color: $color-dark-4;
+                            border-top: 1px solid $color-dark-2;
+                            border-left: 1px solid $color-dark-2;
+                        }
+                    }
+                }
+                .myNavbar__btns {
+                    &:hover {
+                        background-color: transparent;
+                        border-color: transparent;
+                    }
+                }
+            }
+        }
+        .navbar-toggler {
+            background-color: $color-dark-5 !important;
+        }
+    }
+}
+
+//Button
+.darkMode {
+    .button--white {
+        &:hover {
+            @include hoverButton($color-dark-5, $color-dark-0, $color-dark-2);
+
+        }
+    }
+    .button--red {
+        &:hover {
+            @include hoverButton($color-white-0, $color-red-2, $color-red-2);
+        }
+    }
+    .button--dropup {
+        @include styleText($color-dark-5, $fs-1, $fw-1);
+        @include styleButton($color-dark-0, $color-dark-2,$pd-2 + 1, $pd-0);
+        &:hover {
+            @include hoverButton($color-dark-5, $color-dark-6, $color-dark-2);
+        }
+    }
+}
+
+//courses
+.darkMode {
+    .courses {
+        .courses__content {
+            .courses__left {
+                background-color: $color-dark-6;
+                h2 {
+                    color: #fff;
+                }
+            }
+            #myTab {
+                .nav-link {
+                    color: $color-dark-3;
+                    &.active {
+                        background-color: transparent;
+                    }
+                    &:hover {
+                        color: $color-dark-5;
+                    }
+                }
+                &.nav-tabs {
+                    border-bottom: 1px solid $color-dark-2;
+                }
+            }
+        }
+    }
+}
+
+//Card
+.darkMode {
+    .card {
+        background-color: $color-dark-0;
+        border: 1px solid $color-dark-2;
+        .card-body {
+            .card-title {
+                color: $color-dark-5;
+            }
+            .card-text {
+                color: $color-dark-3;
+            }
+            .card__stars {
+                span:nth-child(2) {
+                    color: $color-dark-5;
+                }
+                span:nth-child(3) {
+                    color: $color-dark-3;
+                }
+            }
+            .card__price {
+                span:first-child {
+                    color: $color-dark-3;
+                }
+                span:nth-child(2) {
+                    color: $color-dark-5;
+                }
+            }
+        }
+    }
+}
+
+//Categories
+.darkMode {
+    .categories {
+        .categories__content {
+            h2 {
+                color: $color-dark-5;
+            }
+            .categories__item {
+                background-color: $color-dark-6;
+                border-color: $color-dark-2;
+                box-shadow: 0 3px 1px 0 $color-dark-0;
+                &:hover {
+                    box-shadow: 0 0 3px 2px $color-dark-0;
+                }
+            }
+        }
+    }
+}
+
+//Student
+.darkMode {
+    .students {
+        background-color: $color-dark-6;
+        .student__content {
+            h2 {
+                color: $color-dark-5;
+            }
+        }
+    }
+
+    .card--feedback {
+        background-color: $color-dark-4;
+        .card-body {
+            .card__top {
+                .card__name {
+                    color: $color-dark-5;
+                }
+            }
+        }
+    }
+}
+
+//partners,jobs
+.darkMode {
+    .partners {
+        background-color: $color-dark-6;
+    }
+    .jobs {
+        background-color: $color-dark-6;
+        .jobs__content {
+            .jobs__item {
+                h2 {
+                    color: $color-dark-5;
+                }
+            }
+            .border-right {
+                border-right: 1px solid $color-dark-2 !important;
+            }
+            @include responsive("medium") {
+                .border-right {
+                    border-color: transparent !important;
+                }
+            }
+        }
+    }
+}
+
+//footer
+.darkMode {
+    footer {
+        .footer__top {
+            ul {
+                .nav-item {
+                    .nav-link {
+                        color: $color-dark-5;
+                    }
+                }
+            }
+            .btn-group {
+                .dropdown-menu {
+                    background-color: $color-dark-6;
+
+                    border-color: $color-dark-2;
+                    .dropdown-item {
+                        color: $color-dark-5;
+                        &:hover{
+                            background-color: $color-dark-0;
+                        }
+                    }
+                }
+                .button--dropup{
+                    &:focus{
+                         background-color: $color-dark-1;
+                    }
+                }
+            }
+        }
+        hr {
+            background-color: $color-dark-2;
+        }
+        .footer__bottom{
+            .logo-black {
+                display: none!important;
+            }
+            .logo-white {
+                display: inline-block!important;
+            }
+        }
+    }
+}

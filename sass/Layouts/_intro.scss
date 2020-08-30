@@ -1,0 +1,42 @@
+.intro{
+    padding: $pd-3;
+    background-image: linear-gradient(-45deg, $color-red-0, $color-purple);
+    &__content{
+        width: 80%;
+        margin: 0 auto;
+        .intro__item{
+            color: $color-white-0;
+            display: flex;
+            align-items: center;
+            &--icon{
+                font-size: $fs-6;
+                margin-right: $mg-1 ;
+            }
+            &--details{
+
+                p{
+                    margin: 0;
+                }
+                p:first-child{
+                    font-size: $fs-3 - 1;
+                    font-weight:$fw-2;
+                }
+                
+            }
+        }
+    }
+
+    @include responsive('extra-large'){
+        &__content{
+            .intro__item{
+                &--icon{
+                    display: none;
+                }
+            }
+        }
+    }
+
+    @include responsive('medium'){
+        display: none;
+    }
+}
